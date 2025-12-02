@@ -1,12 +1,15 @@
-   <h1 align="center"> Lettersaviours</h1>
+<h1 align="center"> Lettersaviours</h1>
 <p align="center">
 <img alt="logo" src="LetterSaviours/logo/logo.png" width=200px>
  
 </p>
-<br>
+<br> 
+
 ## 📋 Description
+
 our project is a labyrinth
-## 🚀 Languages
+
+## 🚀 Languages 
 <p align="left">
 <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
 </p>
@@ -19,11 +22,19 @@ our project is a labyrinth
 <a href="https://git-scm.com/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" heigh=48px width=48px/></a>
 </a>
 </p>
+
 ## 👨🏻‍💻 Team Members
+
 | **Name** | **Role** | **Grade** |
+
 | :---:   | :---: | :---: |
+
 | Mustafa Husein| Back-end developer | 🟨 9A |
+
 | Bojidar Stanev | Scrum trainer | 🟥 9B |
-| Nikoleta Georgieva | Front-end developer | 🟥 9B |
-| Aleksandar Petrov | Designer | 🟦 9G |
+
+| Nikoleta Georgieva | Designer | 🟥 9B |
+
+| Aleksandar Petrov | Front-end developer | 🟦 9G |
+
 ---
