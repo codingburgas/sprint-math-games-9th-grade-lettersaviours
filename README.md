@@ -13,6 +13,7 @@ our project is a labyrinth
 <p align="left">
 <a href="https://www.cplusplus.com/"><img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/></a>
 </p>
+
  
 ## 🔧 Tools
 <p align="left">
@@ -27,7 +28,7 @@ our project is a labyrinth
 
 | **Name** | **Role** | **Grade** |
 
-| :---:   | :---: | :---: |
+| :---:  | :---: | :---: |
 
 | Mustafa Husein| Back-end developer | 🟨 9A |
 
