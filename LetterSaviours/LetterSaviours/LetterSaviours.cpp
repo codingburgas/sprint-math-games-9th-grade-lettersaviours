@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-int main() {
-
+int main()
+{
     cout << " __ __   ____  ____    ____  ___ ___   ____  ____  \n";
     cout << "|  |  | /    ||    \\  /    ||   |   | /    ||    \\ \n";
     cout << "|  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |\n";
@@ -12,7 +12,9 @@ int main() {
     cout << "|  |  ||  |  ||  |  ||     ||   |   ||  |  ||  |  |\n";
     cout << "|__|__||__|__||__|__||___,_||___|___||__|__||__|__|\n";
     cout << "                                                   \n";
-    const string hangman[] = {
+
+    const string hangman[] =
+    {
         "  +---+\n"
         "  |   |\n"
         "      |\n"
@@ -70,7 +72,38 @@ int main() {
         "=========\n"
     };
 
-    string word = "syntax";
+    string wordList[30] =
+    {
+        "syntax",  "puzzle",  "galaxy",
+        "castle",  "harbor",  "shadow",
+        "planet",  "rocket",  "hunter",
+        "forest",  "silver",  "beacon",
+        "mirror",  "dragon",  "stream",
+        "anchor",  "throne",  "ribbon",
+        "temple",  "quartz",  "stormy",
+        "spirit",  "summit",  "fabric",
+        "valley",  "memory",  "magnet",
+        "meadow",  "refuge",  "bright"
+    };
+
+
+    int choice = 0;
+    while (choice < 1 || choice > 30)
+    {
+        cout << "Choose a number between (1-30): ";
+        cin >> choice;
+        if (choice < 1 || choice > 30)
+        {
+            cout << "You must enter a valid number between 1-30." << endl;
+            if (!(cin >> choice))
+            {
+                cout << "Invalid input. You can use only numbers! Program will exit." << endl;
+                return 0;
+            }
+        }
+    }
+
+    string word = wordList[choice - 1];
     string guessedWord = "_ _ _ _ _ _";
     int fails = 0;
     int maxFails = 6;
@@ -95,15 +128,15 @@ int main() {
         if (!correct)
         {
             fails++;
-            cout << "Wrong! Attempts left: "
-                << maxFails - fails << endl;
+            cout << "Wrong! Attempts left: " << maxFails - fails << endl;
             cout << hangman[fails] << endl;
         }
 
         bool won = true;
         for (char c : guessedWord)
         {
-            if (c == '_') {
+            if (c == '_')
+            {
                 won = false;
                 break;
             }
@@ -120,7 +153,6 @@ int main() {
             cout << "|     ||     ||     |        \\      / |     ||  |  |\n";
             cout << "|____/  \\___/  \\__,_|         \\_/\\_/   \\___/ |__|__|\n";
             cout << "Well done! You guessed the word!" << endl;
-            return 0;
         }
     }
 
@@ -132,4 +164,6 @@ int main() {
     cout << "|     ||     ||     |       |     ||     |\\    |  |  |  \n";
     cout << "|____/  \\___/  \\__,_|       |_____| \\___/  \\___|  |__|  \n";
     cout << "Out of attempts! The word was: " << word << endl;
+
+    return 0;
 }
