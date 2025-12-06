@@ -112,6 +112,13 @@ int main() {
         if (won)
         {
             cout << guessedWord << endl;
+            cout << " __ __   ___   __ __         __    __   ___   ____  \n";
+            cout << "|  |  | /   \\ |  |  |       |  |__|  | /   \\ |    \\ \n";
+            cout << "|  |  ||     ||  |  |       |  |  |  ||     ||  _  |\n";
+            cout << "|     ||  O  ||  |  |       |  |  |  ||  O  ||  |  |\n";
+            cout << "|___, ||     ||  :  |       |  `  '  ||     ||  |  |\n";
+            cout << "|     ||     ||     |        \\      / |     ||  |  |\n";
+            cout << "|____/  \\___/  \\__,_|         \\_/\\_/   \\___/ |__|__|\n";
             cout << "Well done! You guessed the word!" << endl;
             return 0;
         }
