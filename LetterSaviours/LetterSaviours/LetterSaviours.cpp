@@ -13,64 +13,60 @@ int main()
     cout << "|__|__||__|__||__|__||___,_||___|___||__|__||__|__|\n";
     cout << "                                                   \n";
 
-    const string hangman[] =
+    // Hangman states stored in string array
+    const string hangman[] = 
     {
-        "  +---+\n"
-        "  |   |\n"
-        "      |\n"
-        "      |\n"
-        "      |\n"
-        "      |\n"
-        "=========\n",
+    "  .---.\n"
+    "  |   |\n"
+    "      |\n"
+    "      |\n"
+    "      |\n"
+    "______|\n",
 
-        "  +---+\n"
-        "  |   |\n"
-        "  O   |\n"
-        "      |\n"
-        "      |\n"
-        "      |\n"
-        "=========\n",
+    "  .---.\n"
+    "  |   |\n"
+    "  O   |\n"
+    "      |\n"
+    "      |\n"
+    "______|\n",
 
-        "  +---+\n"
-        "  |   |\n"
-        "  O   |\n"
-        "  |   |\n"
-        "      |\n"
-        "      |\n"
-        "=========\n",
+    "  .---.\n"
+    "  |   |\n"
+    "  O   |\n"
+    "  |   |\n"
+    "      |\n"
+    "______|\n",
 
-        "  +---+\n"
-        "  |   |\n"
-        "  O   |\n"
-        " /|   |\n"
-        "      |\n"
-        "      |\n"
-        "=========\n",
+    "  .---.\n"
+    "  |   |\n"
+    "  O   |\n"
+    " /|   |\n"
+    "      |\n"
+    "______|\n",
 
-        "  +---+\n"
-        "  |   |\n"
-        "  O   |\n"
-        " /|\\  |\n"
-        "      |\n"
-        "      |\n"
-        "=========\n",
+    "  .---.\n"
+    "  |   |\n"
+    "  O   |\n"
+    " /|\\  |\n"
+    "      |\n"
+    "______|\n",
 
-        "  +---+\n"
-        "  |   |\n"
-        "  O   |\n"
-        " /|\\  |\n"
-        " /    |\n"
-        "      |\n"
-        "=========\n",
+    "  .---.\n"
+    "  |   |\n"
+    "  O   |\n"
+    " /|\\  |\n"
+    " /    |\n"
+    "______|\n",
 
-        "  +---+\n"
-        "  |   |\n"
-        "  O   |\n"
-        " /|\\  |\n"
-        " / \\  |\n"
-        "      |\n"
-        "=========\n"
+    "  .---.\n"
+    "  |   |\n"
+    "  O   |\n"
+    " /|\\  |\n"
+    " / \\  |\n"
+    "______|\n"
     };
+
+
 
     string wordList[30] =
     {
@@ -86,8 +82,7 @@ int main()
         "meadow",  "refuge",  "bright"
     };
 
-
-    int choice = 0;
+    int choice = 0; // Hold the number the player chooses
     while (choice < 1 || choice > 30)
     {
         cout << "Choose a number between (1-30): ";
@@ -95,10 +90,10 @@ int main()
         if (choice < 1 || choice > 30)
         {
             cout << "You must enter a valid number between 1-30." << endl;
-            if (!(cin >> choice))
+            if (!(cin >> choice)) // Stop if input is not a number
             {
                 cout << "Invalid input. You can use only numbers! Program will exit." << endl;
-                return 0;
+                return 0; // Exit the program to prevent the input loop from repeating endlessly
             }
         }
     }
@@ -108,6 +103,7 @@ int main()
     int fails = 0;
     int maxFails = 6;
 
+    // Main game loop
     while (fails < maxFails)
     {
         cout << guessedWord << endl;
@@ -116,15 +112,16 @@ int main()
         cin >> guess;
 
         bool correct = false;
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++)  // Check each letter to see if it matches the guess
         {
             if (word[i] == guess)
             {
-                guessedWord[i * 2] = guess;
+                guessedWord[i * 2] = guess; // Put the guessed letter in the right spot in the display
                 correct = true;
             }
         }
 
+        // Increment fail count and display the hangman for a wrong guess
         if (!correct)
         {
             fails++;
@@ -132,13 +129,14 @@ int main()
             cout << hangman[fails] << endl;
         }
 
+        // Check if player has guessed the full word
         bool won = true;
         for (char c : guessedWord)
         {
-            if (c == '_')
+            if (c == '_') // If there’s still an unguessed letter
             {
                 won = false;
-                break;
+                break; // Stop the game after winning
             }
         }
 
@@ -164,6 +162,4 @@ int main()
     cout << "|     ||     ||     |       |     ||     |\\    |  |  |  \n";
     cout << "|____/  \\___/  \\__,_|       |_____| \\___/  \\___|  |__|  \n";
     cout << "Out of attempts! The word was: " << word << endl;
-
-    return 0;
 }
