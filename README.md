@@ -15,7 +15,7 @@ Guess letters, save the word, and test your puzzle-solving skills! 🧠✨
 - [Description](#-description)
 - [Documentation](#-documentation)
 - [Features](#-features)
-- [Tools and Languages](#-tools-and-languages)
+- [Tools and Languages](#%EF%B8%8F-tools-and-languages)
 - [Team](#-team)
 
 ---
@@ -32,8 +32,8 @@ Challenge your mind, have fun, and improve your vocabulary! 📖💡
 
 ## 📖 Documentation
 
-- 📄 **Word Documentation:** `LetterSaviours/docs/Documentation.docx`  
-- 📊 **Presentation:** `LetterSaviours/docs/Presentation.pptx`  
+- 📄 **Word Documentation:** `docs/Documentation.docx`  
+- 📊 **Presentation:** `docs/Presentation.pptx`  
 
 ---
 
@@ -93,3 +93,5 @@ Challenge your mind, have fun, and improve your vocabulary! 📖💡
   </tr>
 </table>
 </p>
+
+
