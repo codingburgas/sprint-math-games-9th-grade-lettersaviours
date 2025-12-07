@@ -1,7 +1,7 @@
 <h1 align="center"><strong>LetterSaviours</strong></h1>
 
 <p align="center">
-  <img alt="Lettersaviours Logo" src="logo.png" width="230px">
+  <img alt="Lettersaviours Logo" src="LetterSaviours/logo/logo.png" width="230px">
 </p>
 
 <p align="center">
