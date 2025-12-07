@@ -32,8 +32,11 @@ Challenge your mind, have fun, and improve your vocabulary! 📖💡
 
 ## 📖 Documentation
 
-- 📄 **Word Documentation:** `docs/Documentation.docx`  
-- 📊 **Presentation:** `docs/Presentation.pptx`  
+- 📄 **Word Documentation:** `sprint-math-games-9th-grade-lettersaviours/docs
+/Documentation.docx`  
+- 📊 **Presentation:** `sprint-math-games-9th-grade-lettersaviours/docs
+/Presentation.pptx
+`  
 
 ---
 
